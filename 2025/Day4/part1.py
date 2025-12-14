@@ -36,7 +36,6 @@ if __name__ == '__main__':
     print(input)
     taskPart = task(input)
     taskPart.solve()
-    taskPart.isPaperAccessible(0,2)
     for i in taskPart.input:
         print(i)
     print(taskPart.result)
