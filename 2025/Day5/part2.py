@@ -13,32 +13,36 @@ class task():
     def solve(self):
         #
         self.freshIDs = sorted(self.freshIDs, key=firstPartID)
-        #
-        #for IDRange in self.freshIDs:
 
+        #
+        sortedFreshIDsIdx = 0
+        while sortedFreshIDsIdx < len(self.freshIDs)-1:
+            firstID_firstPart = firstPartID(self.freshIDs[sortedFreshIDsIdx])
+            firstID_secondPart = secondPartID(self.freshIDs[sortedFreshIDsIdx])
+            secondID_firstPart = firstPartID(self.freshIDs[sortedFreshIDsIdx + 1])
+            secondID_secondPart = secondPartID(self.freshIDs[sortedFreshIDsIdx + 1])
+            if firstID_secondPart >= secondID_secondPart:
+                self.freshIDs.pop(sortedFreshIDsIdx + 1)
+            elif firstID_secondPart >= secondID_firstPart:
+                self.freshIDs[sortedFreshIDsIdx] = newIDrange(firstID_firstPart, secondID_secondPart)
+                self.freshIDs.pop(sortedFreshIDsIdx + 1)
+            if secondID_firstPart > firstID_secondPart:
+                sortedFreshIDsIdx += 1
         #
         for IDRange in self.freshIDs:
-            divider = IDRange.index("-")
-            self.freshIDRanges.append([int(IDRange[:divider]), int(IDRange[divider+1:])])
+            self.freshIDRanges.append([firstPartID(IDRange), secondPartID(IDRange)])
         #
-        for stID in self.availableIDs:
-            ID = int(stID)
-            if self.isFresh(ID):
-                self.freshAvailableIDs.append(ID)
-        #
-        self.result = len(self.freshAvailableIDs)
-
-    def isFresh(self, ID: int):
-        for freshIDRange in self.freshIDRanges:
-            if freshIDRange[0] <= ID <= freshIDRange[1]:
-                return True
-        return False
+        for IDRange in self.freshIDRanges:
+            self.result += IDRange[1] - IDRange[0] + 1
 
 def firstPartID(numberRange):
     return int(numberRange.split("-")[0])
 
 def secondPartID(numberRange):
     return int(numberRange.split("-")[1])
+
+def newIDrange(startID: int, endID: int):
+    return str(startID) + "-" + str(endID)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Del_1", "Del_1\Del_1.csproj", "{A829AE16-C0C4-4252-A235-716D4BA73799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Del_2", "Del_2\Del_2.csproj", "{21F56C69-629D-4DF9-8FA1-237CA47D5DEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A829AE16-C0C4-4252-A235-716D4BA73799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A829AE16-C0C4-4252-A235-716D4BA73799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A829AE16-C0C4-4252-A235-716D4BA73799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A829AE16-C0C4-4252-A235-716D4BA73799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21F56C69-629D-4DF9-8FA1-237CA47D5DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21F56C69-629D-4DF9-8FA1-237CA47D5DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21F56C69-629D-4DF9-8FA1-237CA47D5DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21F56C69-629D-4DF9-8FA1-237CA47D5DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.AssemblyInfoInputs.cache
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.AssemblyInfo.cs
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.csproj.CoreCompileInputs.cache
+C:\Users\ca\RiderProjects\2024\Dag_3\bin\Debug\net9.0\Dag_3.exe
+C:\Users\ca\RiderProjects\2024\Dag_3\bin\Debug\net9.0\Dag_3.deps.json
+C:\Users\ca\RiderProjects\2024\Dag_3\bin\Debug\net9.0\Dag_3.runtimeconfig.json
+C:\Users\ca\RiderProjects\2024\Dag_3\bin\Debug\net9.0\Dag_3.dll
+C:\Users\ca\RiderProjects\2024\Dag_3\bin\Debug\net9.0\Dag_3.pdb
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.dll
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\refint\Dag_3.dll
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.pdb
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\Dag_3.genruntimeconfig.cache
+C:\Users\ca\RiderProjects\2024\Dag_3\obj\Debug\net9.0\ref\Dag_3.dll
