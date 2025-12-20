@@ -13,28 +13,26 @@ class Task:
         self.result: int = 0
         self.beamPositions: list[Coordinate] = [Coordinate(diagram[0].find(self.stStart), 0)]
         self.beamBelowPositions: list[Coordinate] = []
-        self.beamBelowPositionsOutput: list[Coordinate] = []
 
     def solve(self):
         # Move beam down
-        for y in range(len(self.diagram)):
-            print()
-            beamBelowPositions = []
+        for y in range(len(self.diagram)-1):
+            self.beamBelowPositions = []
             for idx, coord in enumerate(self.beamPositions):
                 beamBelowPositionsOutput = self.mv_beam_down(coord)
-                print(beamBelowPositionsOutput)
                 for coordinate in beamBelowPositionsOutput:
+                    self.diagram[coordinate.y] = str_replacer(self.diagram[coordinate.y], self.stBeam, coordinate.x)
                     self.beamBelowPositions.append(coordinate)
-            self.beamPositions = beamBelowPositions.copy()
-        print(len(self.beamPositions))
+            self.beamPositions = self.beamBelowPositions.copy()
+        self.result = len(self.beamPositions)
 
     def mv_beam_down(self, coord: Coordinate):
         # Return if last row
         if coord.y >= len(self.diagram)-1: return
         item_below = self.get_item(Coordinate(coord.x, coord.y+1))
-        if item_below == self.stEmptySpace:
+        if item_below == self.stEmptySpace or item_below == self.stBeam:
             # Move item down
-            coord.set_y(coord.y + 1)
+            coord.set_y(coord.y+1)
             return [coord]
         else:
             # Split the beam
@@ -51,8 +49,8 @@ class Task:
 
 
 if __name__ == '__main__':
-    input = lines_in_path("input_test")
-    #input = lines_in_path("input")
+    #input = lines_in_path("input_test")
+    input = lines_in_path("input")
     print(input)
     taskPart = Task(input)
     taskPart.solve()
